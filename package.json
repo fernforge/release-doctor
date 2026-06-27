@@ -1,0 +1,36 @@
+{
+  "name": "release-doctor",
+  "version": "0.1.0",
+  "description": "Read-only scanner that checks whether your npm/PyPI publish CI is ready for OIDC trusted publishing, after npm revoked classic tokens (Dec 9 2025). Prints the exact diff to fix.",
+  "bin": {
+    "release-doctor": "src/cli.js"
+  },
+  "type": "commonjs",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "test": "node test/run.js"
+  },
+  "keywords": [
+    "npm",
+    "pypi",
+    "trusted-publishing",
+    "oidc",
+    "provenance",
+    "npm-token",
+    "github-actions",
+    "ci",
+    "supply-chain",
+    "release"
+  ],
+  "author": "fernforge",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fernforge/release-doctor.git"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
