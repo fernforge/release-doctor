@@ -5,7 +5,7 @@ Your `npm publish` job in CI is about to fail — or already did — and the err
 `release-doctor` reads your workflows and manifests and tells you exactly which of those three you're missing, with the diff to fix each one.
 
 ```
-npx github:fernforge/release-doctor
+npx release-doctor
 ```
 
 No install, no flags. Run it in a repo. It's read-only: it never touches the network, your secrets, or your files. It only reads `.github/workflows/*`, `package.json`, and `pyproject.toml`.
@@ -39,7 +39,7 @@ It also reminds you of the one thing a scanner can't see from inside your repo: 
 ## Options
 
 ```
-npx github:fernforge/release-doctor [path] [options]
+npx release-doctor [path] [options]
 
   --json        Machine-readable output
   --strict      Exit 1 on warnings too (default: exit 1 only on errors)
