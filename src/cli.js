@@ -33,7 +33,7 @@ scanner: it never touches the network, your secrets, or your files. It reads
 .github/workflows + package.json/pyproject and prints the exact diff to fix.
 
 Usage:
-  npx github:fernforge/release-doctor [path] [options]
+  npx release-doctor [path] [options]
 
 Options:
   --json        Machine-readable output

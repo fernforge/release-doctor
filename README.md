@@ -46,11 +46,19 @@ npx release-doctor [path] [options]
   --no-color    Disable ANSI color
 ```
 
-Exit code is `0` when clean and `1` when there are errors, so you can drop it into a pre-release check:
+Exit code is `0` when clean and `1` when there are errors, so it doubles as a guard in CI.
+
+## As a GitHub Action
+
+Catch publish-config drift on every PR, before the release job is the thing that fails:
 
 ```yaml
-- run: npx -y github:fernforge/release-doctor --strict
+- uses: fernforge/release-doctor@v1
+  with:
+    strict: false   # set true to fail on warnings too
 ```
+
+It runs the same read-only scan and fails the step on any error. No token, no `id-token` permission, nothing to configure — it only reads your workflow files and manifests.
 
 ## Why trusted publishing, briefly
 
